@@ -3,6 +3,9 @@ const app = express();
 
 const productRoutes= require('./api/routes/product');
 
-app.use('/products',productRoutes)
+const ordeRoutes= require('./api/routes/order');
+
+app.use('/orders',ordeRoutes);
+app.use('/products',productRoutes);
 
 module.exports= app;
